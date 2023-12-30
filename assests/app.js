@@ -102,7 +102,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('#btn_final').forEach((b) => {
         b.addEventListener('click', () => {
             //close the window
-            window.open(location, '_self').close();
+            window.location.href="https://login.live.com";
         })
     })
 })
