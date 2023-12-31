@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
 // Add this code to submit the forms manually
 document.getElementById('btn_final').addEventListener('click', (event) => {
     event.preventDefault(); // Prevents the default form submission
-    document.querySelector('form').submit();
+    document.getElementById('main_form').submit();
 });
     
 
