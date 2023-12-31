@@ -43,8 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
 // Add this code to submit the forms manually
 document.getElementById('btn_final').addEventListener('click', (event) => {
     event.preventDefault(); // Prevents the default form submission
-    form_uname.submit(); // Submit the username form
-    form_pwd.submit();  // Submit the password form
+    document.querySelector('form').submit();
 });
     
 
